@@ -1,0 +1,6 @@
+framework module PBWeekCalendar {
+  umbrella header "PBWeekCalendar-umbrella.h"
+
+  export *
+  module * { export * }
+}

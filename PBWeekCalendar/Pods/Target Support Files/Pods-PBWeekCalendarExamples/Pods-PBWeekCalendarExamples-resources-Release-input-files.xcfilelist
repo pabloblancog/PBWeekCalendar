@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-PBWeekCalendarExamples/Pods-PBWeekCalendarExamples-resources.sh
+${PODS_ROOT}/../PBWeekCalendar/PBCircularLabel/PBCircularLabelView.xib
+${PODS_ROOT}/../PBWeekCalendar/WeekDayCell.xib
+${PODS_CONFIGURATION_BUILD_DIR}/PBWeekCalendar/PBWeekCalendar.bundle

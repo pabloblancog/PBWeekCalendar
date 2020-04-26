@@ -1,0 +1,22 @@
+PODS:
+  - PBUtils (0.0.4)
+  - PBWeekCalendar (0.0.1):
+    - PBUtils
+
+DEPENDENCIES:
+  - PBUtils (from `../../PBUtils`)
+  - PBWeekCalendar (from `../.`)
+
+EXTERNAL SOURCES:
+  PBUtils:
+    :path: "../../PBUtils"
+  PBWeekCalendar:
+    :path: "../."
+
+SPEC CHECKSUMS:
+  PBUtils: 7a0b6a7c957de6dbe0366c87dc9b02a62347217b
+  PBWeekCalendar: 028e93edc2827a8042597ae3f4d44e2e940577bb
+
+PODFILE CHECKSUM: 64f9837b4600cfcc8fbffeac2dc1ccccf5a41619
+
+COCOAPODS: 1.9.1

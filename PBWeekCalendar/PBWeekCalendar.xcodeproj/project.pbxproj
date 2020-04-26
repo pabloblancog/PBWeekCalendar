@@ -16,7 +16,6 @@
 		8B358F8F244CACA900B3AA12 /* PBWeekCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B358F8E244CACA900B3AA12 /* PBWeekCalendarTests.swift */; };
 		8B358F91244CACA900B3AA12 /* PBWeekCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B358F83244CACA900B3AA12 /* PBWeekCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B358FA1244CACC000B3AA12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B358FA0244CACC000B3AA12 /* AppDelegate.swift */; };
-		8B358FA3244CACC000B3AA12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B358FA2244CACC000B3AA12 /* SceneDelegate.swift */; };
 		8B358FA5244CACC000B3AA12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B358FA4244CACC000B3AA12 /* ViewController.swift */; };
 		8B358FAA244CACC200B3AA12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B358FA9244CACC200B3AA12 /* Assets.xcassets */; };
 		8B358FAD244CACC200B3AA12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B358FAB244CACC200B3AA12 /* LaunchScreen.storyboard */; };
@@ -54,7 +53,6 @@
 		8B358F90244CACA900B3AA12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B358F9E244CACC000B3AA12 /* PBWeekCalendarExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PBWeekCalendarExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B358FA0244CACC000B3AA12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B358FA2244CACC000B3AA12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8B358FA4244CACC000B3AA12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B358FA9244CACC200B3AA12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B358FAC244CACC200B3AA12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -163,12 +161,11 @@
 			isa = PBXGroup;
 			children = (
 				8B358FA0244CACC000B3AA12 /* AppDelegate.swift */,
-				8B358FA2244CACC000B3AA12 /* SceneDelegate.swift */,
 				8B358FA4244CACC000B3AA12 /* ViewController.swift */,
+				8B118FDC2452D3C6003BD04F /* ViewController.xib */,
 				8B358FA9244CACC200B3AA12 /* Assets.xcassets */,
 				8B358FAB244CACC200B3AA12 /* LaunchScreen.storyboard */,
 				8B358FAE244CACC200B3AA12 /* Info.plist */,
-				8B118FDC2452D3C6003BD04F /* ViewController.xib */,
 			);
 			path = PBWeekCalendarExamples;
 			sourceTree = "<group>";
@@ -475,7 +472,6 @@
 			files = (
 				8B358FA5244CACC000B3AA12 /* ViewController.swift in Sources */,
 				8B358FA1244CACC000B3AA12 /* AppDelegate.swift in Sources */,
-				8B358FA3244CACC000B3AA12 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
