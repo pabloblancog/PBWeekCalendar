@@ -35,7 +35,7 @@ public class PBWeekCalendarCollectionView: UICollectionView {
         }
     }
     
-    private var weekCalendarDelegate: PBWeekCalendarDelegate?
+    public var weekCalendarDelegate: PBWeekCalendarDelegate?
     
     public init(frame: CGRect, currentDate: Date, selectedDate: Date? = nil, delegate: PBWeekCalendarDelegate? = nil) {
         self.currentDate = currentDate
@@ -48,6 +48,7 @@ public class PBWeekCalendarCollectionView: UICollectionView {
     public required init?(coder: NSCoder) {
         self.selectedDate = Date()
         super.init(coder: coder)
+        collectionViewLayout = weekCalendarLayout
         commonInit()
     }
     
@@ -64,6 +65,12 @@ public class PBWeekCalendarCollectionView: UICollectionView {
     
     private func registerCells() {
         register(cellIdentifier: WeekDayCell.defaultReuseIdentifier)
+    }
+    
+    public func setup(currentDate: Date, selectedDate: Date? = nil, delegate: PBWeekCalendarDelegate? = nil) {
+        self.currentDate = currentDate
+        self.selectedDate = selectedDate ?? currentDate
+        self.weekCalendarDelegate = delegate
     }
     
     private func getDate(forIndexPath indexPath: IndexPath) -> Date {

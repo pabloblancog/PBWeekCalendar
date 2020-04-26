@@ -1,6 +1,6 @@
 {
   "name": "PBWeekCalendar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "Swift Week Calendar",
   "description": "Swift Week calendar for your project",
   "homepage": "https://github.com/pabloblancog/PBWeekCalendar",
@@ -17,15 +17,10 @@
   "swift_versions": "5.0",
   "source": {
     "git": "https://github.com/pabloblancog/PBWeekCalendar.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "source_files": "PBWeekCalendar/PBWeekCalendar/**/*.{swift}",
   "resources": "PBWeekCalendar/PBWeekCalendar/**/*.{xcassets,xib,json}",
-  "resource_bundles": {
-    "PBWeekCalendar": [
-      "PBWeekCalendar/Assets/Localization/**/*.strings"
-    ]
-  },
   "static_framework": true,
   "dependencies": {
     "PBUtils": [

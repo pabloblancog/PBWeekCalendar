@@ -22,8 +22,6 @@ target 'PBWeekCalendarExamples' do
   use_frameworks!
 
   # Pods for PBWeekCalendarExamples
-  # pod 'PBUtils'
-  pod 'PBUtils', :path => '../../PBUtils'
   pod 'PBWeekCalendar', :path => '../.'
 
 end
