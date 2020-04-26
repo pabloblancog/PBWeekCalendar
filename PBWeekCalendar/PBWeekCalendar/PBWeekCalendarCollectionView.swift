@@ -15,7 +15,7 @@ public protocol PBWeekCalendarDelegate {
 
 public class PBWeekCalendarCollectionView: UICollectionView {
 
-    let weekCalendarLayout: UICollectionViewLayout = {
+    private let weekCalendarLayout: UICollectionViewLayout = {
         let weekCalendarLayout = UICollectionViewFlowLayout()
         weekCalendarLayout.scrollDirection = .horizontal
         weekCalendarLayout.minimumInteritemSpacing = 0.0
@@ -23,19 +23,19 @@ public class PBWeekCalendarCollectionView: UICollectionView {
         return weekCalendarLayout
     }()
     
-    var currentDate: Date = Date()
-    var firstWeekdayDate: Date {
+    private var currentDate: Date = Date()
+    private var firstWeekdayDate: Date {
         get {
             currentDate.next(.monday, direction: .backward, considerToday: true)
         }
     }
-    var selectedDate: Date {
+    private var selectedDate: Date {
         didSet {
             reloadData()
         }
     }
     
-    var weekCalendarDelegate: PBWeekCalendarDelegate?
+    private var weekCalendarDelegate: PBWeekCalendarDelegate?
     
     public init(frame: CGRect, currentDate: Date, selectedDate: Date? = nil, delegate: PBWeekCalendarDelegate? = nil) {
         self.currentDate = currentDate
@@ -62,11 +62,11 @@ public class PBWeekCalendarCollectionView: UICollectionView {
         registerCells()
     }
     
-    func registerCells() {
+    private func registerCells() {
         register(cellIdentifier: WeekDayCell.defaultReuseIdentifier)
     }
     
-    func getDate(forIndexPath indexPath: IndexPath) -> Date {
+    private func getDate(forIndexPath indexPath: IndexPath) -> Date {
         do {
             return try firstWeekdayDate.addingDays(days: indexPath.row)
         } catch {
