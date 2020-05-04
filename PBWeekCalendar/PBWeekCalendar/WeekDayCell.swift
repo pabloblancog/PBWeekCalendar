@@ -18,6 +18,7 @@ struct WeekDayCellData {
     var dayNumberString: String
     var isSelected: Bool
     var isToday: Bool
+    var tintColor: UIColor?
 }
 
 class WeekDayCell: UICollectionViewCell {
@@ -35,7 +36,8 @@ class WeekDayCell: UICollectionViewCell {
         layer.cornerRadius = 10
         dayView.setup(text: cellData.dayNumberString,
                       isSelected: cellData.isSelected,
-                      isToday: cellData.isToday)
+                      isToday: cellData.isToday,
+                      tintColor: cellData.tintColor)
         
         detailLabel.text = cellData.dayLiteralString
     }

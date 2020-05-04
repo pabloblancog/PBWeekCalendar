@@ -11,6 +11,8 @@ import PBUtils
 
 class PBCircularLabelView: UIView {
     
+    static let defaultColor = UIColor.red
+    
     @IBOutlet weak var contentView: UIView!
     
     @IBOutlet weak var textLabel: UILabel! {
@@ -33,7 +35,7 @@ class PBCircularLabelView: UIView {
         loadNibContent()
     }
     
-    public func setup(text: String, isSelected: Bool, isToday: Bool) {
+    public func setup(text: String, isSelected: Bool, isToday: Bool, tintColor: UIColor? = nil) {
 
         let backgroundColor: UIColor
         let textColor: UIColor
@@ -41,7 +43,7 @@ class PBCircularLabelView: UIView {
         
         switch (isSelected, isToday) {
         case (true, true):
-            backgroundColor = .red
+            backgroundColor = tintColor ?? PBCircularLabelView.defaultColor
             textColor = .white
             font = UIFont.systemFont(ofSize: 16, weight: .bold)
         case (true, false):
@@ -50,7 +52,7 @@ class PBCircularLabelView: UIView {
             font = UIFont.systemFont(ofSize: 16, weight: .bold)
         case (false, true):
             backgroundColor = .clear
-            textColor = .red
+            textColor = tintColor ?? PBCircularLabelView.defaultColor
             font = UIFont.systemFont(ofSize: 16, weight: .regular)
         case (false, false):
             backgroundColor = .clear

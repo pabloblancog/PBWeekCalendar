@@ -36,6 +36,7 @@ public class PBWeekCalendarCollectionView: UICollectionView {
     }
     
     public var weekCalendarDelegate: PBWeekCalendarDelegate?
+    public var customTintColor: UIColor?
     
     public init(frame: CGRect, currentDate: Date, selectedDate: Date? = nil, delegate: PBWeekCalendarDelegate? = nil) {
         self.currentDate = currentDate
@@ -67,10 +68,11 @@ public class PBWeekCalendarCollectionView: UICollectionView {
         register(cellIdentifier: WeekDayCell.defaultReuseIdentifier)
     }
     
-    public func setup(currentDate: Date, selectedDate: Date? = nil, delegate: PBWeekCalendarDelegate? = nil) {
+    public func setup(currentDate: Date, selectedDate: Date? = nil, delegate: PBWeekCalendarDelegate? = nil, customTintColor: UIColor? = nil) {
         self.currentDate = currentDate
         self.selectedDate = selectedDate ?? currentDate
         self.weekCalendarDelegate = delegate
+        self.customTintColor = customTintColor
     }
     
     private func getDate(forIndexPath indexPath: IndexPath) -> Date {
@@ -113,7 +115,8 @@ extension PBWeekCalendarCollectionView: UICollectionViewDataSource {
         let weekDayCellData = WeekDayCellData(dayLiteralString: dayLiteralString,
                                               dayNumberString: dayNumberString,
                                               isSelected: isSelectedDate,
-                                              isToday: date.isToday)
+                                              isToday: date.isToday,
+                                              tintColor: customTintColor)
         cell.setup(cellData: weekDayCellData)
         
         return cell
